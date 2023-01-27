@@ -36,38 +36,26 @@ const Login = () => {
   xmlhttp.open("GET", "https://63c5cfbdf80fabd877f05d4d.mockapi.io/login");
   xmlhttp.send();
 
-  /*function Verificar() {
+  function Verificar() {
     if (
-      email === JSON.parse(xmlhttp.response)[0].email &&
-      senha === JSON.parse(xmlhttp.response)[0].senha
+      (email === JSON.parse(xmlhttp.response)[0].email &&
+        senha === JSON.parse(xmlhttp.response)[0].senha) ||
+      (email === JSON.parse(xmlhttp.response)[1].email &&
+        senha === JSON.parse(xmlhttp.response)[1].senha) ||
+      (email === JSON.parse(xmlhttp.response)[2].email &&
+        senha === JSON.parse(xmlhttp.response)[2].senha) ||
+      (email === JSON.parse(xmlhttp.response)[3].email &&
+        senha === JSON.parse(xmlhttp.response)[3].senha) ||
+      (email === JSON.parse(xmlhttp.response)[4].email &&
+        senha === JSON.parse(xmlhttp.response)[4].senha) ||
+      (email === JSON.parse(xmlhttp.response)[5].email &&
+        senha === JSON.parse(xmlhttp.response)[5].senha)
     ) {
-      alert("Foiiiii");
-    } else if (
-      email === JSON.parse(xmlhttp.response)[1].email &&
-      senha === JSON.parse(xmlhttp.response)[1].senha
-    ) {
-      alert("Foii 2");
-    } else if (
-      email === JSON.parse(xmlhttp.response)[2].email &&
-      senha === JSON.parse(xmlhttp.response)[2].senha
-    ) {
-      alert("Foii 3");
-    } else if (
-      email === JSON.parse(xmlhttp.response)[3].email &&
-      senha === JSON.parse(xmlhttp.response)[3].senha
-    ) {
-      alert("Foii 4");
-    } else if (
-      email === JSON.parse(xmlhttp.response)[4].email &&
-      senha === JSON.parse(xmlhttp.response)[4].senha
-    ) {
-      alert("Foii 5");
-    } else if (
-      email === JSON.parse(xmlhttp.response)[5].email &&
-      senha === JSON.parse(xmlhttp.response)[5].senha
-    ) {
-      alert("Foii 6");
-    } */
+      alert("Foiiii!");
+    } else {
+      alert("Não foi!!!!");
+    }
+  }
   /*for (var i = 1; i < 7; i++) {
       if (
         email === JSON.parse(xmlhttp.response)[i].email &&
@@ -147,7 +135,7 @@ const Login = () => {
               </FormControl>
               <Center>
                 <Button
-                  /*onClick={Verificar}*/
+                  onClick={Verificar}
                   id="btn"
                   w={240}
                   p="6"

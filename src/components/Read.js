@@ -118,7 +118,7 @@ function Read() {
         justify="center"
         w="100%"
       >
-        <Link to='/home' >
+        <Link to='/' >
           <Button
             w={240}
             p="6"
